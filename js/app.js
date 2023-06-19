@@ -6,16 +6,31 @@ const mobileButton = document.querySelector(".mobile-button");
 const shareMode = document.querySelector("#share-mode");
 const mobileShare = document.querySelector(".mobile-share");
 
-buttonShare.addEventListener("click", function () {
-  mobileButton.classList.remove("flex");
-  mobileButton.classList.add("hidden");
-  mobileShare.classList.remove("hidden");
-  mobileShare.classList.add("flex");
-});
+// share mode in desktop
+const desktopShare = document.querySelector(".desktop-share");
+const triangle = document.querySelector(".triangle");
 
-shareMode.addEventListener("click", function () {
-  mobileShare.classList.remove("flex");
-  mobileShare.classList.add("hidden");
-  mobileButton.classList.remove("hidden");
-  mobileButton.classList.add("flex");
-});
+const width = document.documentElement.clientWidth || window.innerWidth;
+
+if (width <= 375) {
+  buttonShare.addEventListener("click", function () {
+    mobileButton.classList.remove("flex");
+    mobileButton.classList.add("hidden");
+    mobileShare.classList.remove("hidden");
+    mobileShare.classList.add("flex");
+  });
+
+  shareMode.addEventListener("click", function () {
+    mobileShare.classList.remove("flex");
+    mobileShare.classList.add("hidden");
+    mobileButton.classList.remove("hidden");
+    mobileButton.classList.add("flex");
+  });
+} else {
+  buttonShare.addEventListener("click", function () {
+    desktopShare.classList.toggle("hidden");
+    desktopShare.classList.toggle("flex");
+    triangle.classList.toggle("hidden");
+    triangle.classList.toggle("flex");
+  });
+}

@@ -18,35 +18,46 @@
     <link rel="stylesheet" href="css/output.css" />
   </head>
   <body class="bg-lightGrayishBlue">
-    <section class="sm:mx-auto sm:flex sm:h-screen sm:w-[375px] sm:items-center sm:justify-center">
-      <div class="card mt-20 rounded-lg bg-white">
+    <section class="sm:mx-auto sm:flex sm:h-screen sm:w-[375px] sm:items-center sm:justify-center lg:w-screen lg:flex-col">
+      <div class="card mt-20 rounded-lg bg-white lg:w-3/5 lg:overflow-hidden lg:rounded-l-lg">
         <!-- image drawers -->
-        <div>
-          <img src="./images/drawers.jpg" alt="Drawers with green color" class="h-60 w-96 overflow-hidden rounded-t-lg object-cover object-top" />
+        <div class="lg:-mt-10 lg:h-full lg:w-full lg:object-cover">
+          <img
+            src="./images/drawers.jpg"
+            alt="Drawers with green color"
+            class="h-60 w-96 overflow-hidden rounded-t-lg object-cover object-top lg:mt-10 lg:h-full lg:w-2/5 lg:overflow-hidden lg:rounded-l-lg lg:rounded-t-none"
+          />
         </div>
 
         <!-- headings -->
-        <div class="mt-10 px-9 font-manrope">
-          <h3 class="text-lg font-bold text-veryDarkGrayishBlue">Shift the overall look and feel by adding these wonderful touches to furniture in your home</h3>
+        <div class="mt-10 px-9 font-manrope lg:relative">
+          <h3 class="text-lg font-bold text-veryDarkGrayishBlue lg:absolute lg:left-[260px] lg:-mt-[340px] lg:px-32 lg:py-3 lg:tracking-wide">
+            Shift the overall look and feel by adding these wonderful touches to furniture in your home
+          </h3>
         </div>
 
         <!-- paragraph -->
-        <div class="mt-3 pl-9 pr-16 font-manrope">
-          <p class="text-sm text-desaturatedDarkBlue">
+        <div class="mt-3 pl-9 pr-16 font-manrope lg:relative lg:pl-0 lg:pr-0">
+          <p class="text-sm text-desaturatedDarkBlue lg:absolute lg:left-[370px] lg:-mt-56 lg:w-[380px] lg:px-5 lg:text-xs">
             Ever been in a room and felt like something was missing? Perhaps it felt slightly bare and uninviting. I’ve got some simple tips to help you make any room feel
             complete.
           </p>
         </div>
 
+        <!-- mobile version -->
         <!-- profile + share button -->
-        <div class="mobile-button relative mt-3 flex px-9 pt-3 font-manrope transition">
-          <img src="./images/avatar-michelle.jpg" alt="Image of Michelle Appleton" class="mb-5 w-14 rounded-full" />
-          <div class="ml-5 flex flex-col justify-center text-sm">
-            <p class="mt-2 text-veryDarkGrayishBlue">Michelle Appleton</p>
-            <p class="mb-5 text-grayishBlue">28 Jun 2020</p>
+        <div class="mobile-button relative mt-3 flex px-9 pt-3 font-manrope transition lg:relative">
+          <img src="./images/avatar-michelle.jpg" alt="Image of Michelle Appleton" class="mb-5 w-14 rounded-full lg:absolute lg:left-96 lg:-mt-40" />
+          <div class="ml-5 flex flex-col justify-center text-sm lg:relative">
+            <p class="mt-2 text-veryDarkGrayishBlue lg:absolute lg:-right-[538px] lg:-mt-72">Michelle Appleton</p>
+            <p class="mb-5 text-grayishBlue lg:absolute lg:-right-[500px] lg:-mt-56">28 Jun 2020</p>
           </div>
           <div>
-            <svg xmlns="http://www.w3.org/2000/svg" id="button-share" class="absolute right-14 top-7 h-8 w-8 cursor-pointer rounded-full bg-lightGrayishBlue">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              id="button-share"
+              class="absolute right-14 top-7 h-8 w-8 cursor-pointer rounded-full bg-lightGrayishBlue lg:right-40 lg:-mt-[165px]"
+            >
               <g transform="translate(8, 8)">
                 <path fill="#6E8098" d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z" />
               </g>
@@ -65,6 +76,20 @@
               <path fill="#ECF2F8" d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z" />
             </g>
           </svg>
+        </div>
+
+        <!-- desktop version -->
+        <!-- share section -->
+        <div class="absolute">
+          <div class="desktop-share absolute bottom-44 left-[585px] mt-3 hidden w-60 justify-start rounded-lg bg-veryDarkGrayishBlue p-3 font-manrope shadow-lg">
+            <p class="text-md ml-1 mt-1 scale-75 uppercase tracking-[0.3rem] text-desaturatedDarkBlue">Share</p>
+            <img src="./images/icon-facebook.svg" alt="Icon Facebook" class="mx-2 w-7 scale-[0.65] cursor-pointer" />
+            <img src="./images/icon-twitter.svg" alt="Icon Twitter" class="mx-1 w-8 scale-[0.65] cursor-pointer" />
+            <img src="./images/icon-pinterest.svg" alt="Icon Pinterest" class="mx-1 w-8 scale-[0.65] cursor-pointer" />
+          </div>
+          <div
+            class="triangle absolute bottom-[163px] left-[668px] hidden h-0 w-0 border-l-[20px] border-r-[20px] border-t-[25px] border-veryDarkGrayishBlue border-l-transparent border-r-transparent"
+          ></div>
         </div>
       </div>
     </section>
