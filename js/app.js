@@ -12,7 +12,7 @@ const triangle = document.querySelector(".triangle");
 
 const width = document.documentElement.clientWidth || window.innerWidth;
 
-if (width <= 375) {
+if (width <= 810) {
   buttonShare.addEventListener("click", function () {
     mobileButton.classList.remove("flex");
     mobileButton.classList.add("hidden");
